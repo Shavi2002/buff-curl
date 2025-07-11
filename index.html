@@ -32,31 +32,10 @@
   </style>
 </head>
 <body>
-  <section class="cb-tagreel">
+<section class="cb-tagreel">
     <div class="cb-tagreel-content">
       <div class="cb-tagreel-row">
-        <!-- First loop -->
-        <div class="cb-tagreel-item"><span>Aloe &amp; Panthenol Hydration •  </span></div>
-        <div class="cb-tagreel-item"><span>Light Foam Formula •  </span></div>
-        <div class="cb-tagreel-item"><span>No Buildup •  </span></div>
-        <div class="cb-tagreel-item"><span>pH-Balanced •  </span></div>
-        <!-- Duplicate for seamless -->
-        <div class="cb-tagreel-item"><span>Aloe &amp; Panthenol Hydration •  </span></div>
-        <div class="cb-tagreel-item"><span>Light Foam Formula •  </span></div>
-        <div class="cb-tagreel-item"><span>No Buildup •  </span></div>
-        <div class="cb-tagreel-item"><span>pH-Balanced •  </span></div>
-        <div class="cb-tagreel-item"><span>Aloe &amp; Panthenol Hydration •  </span></div>
-        <div class="cb-tagreel-item"><span>Light Foam Formula •  </span></div>
-        <div class="cb-tagreel-item"><span>No Buildup •  </span></div>
-        <div class="cb-tagreel-item"><span>pH-Balanced •  </span></div>
-        <div class="cb-tagreel-item"><span>Aloe &amp; Panthenol Hydration •  </span></div>
-        <div class="cb-tagreel-item"><span>Light Foam Formula •  </span></div>
-        <div class="cb-tagreel-item"><span>No Buildup •  </span></div>
-        <div class="cb-tagreel-item"><span>pH-Balanced •  </span></div>
-        <div class="cb-tagreel-item"><span>Aloe &amp; Panthenol Hydration •  </span></div>
-        <div class="cb-tagreel-item"><span>Light Foam Formula •  </span></div>
-        <div class="cb-tagreel-item"><span>No Buildup •  </span></div>
-        <div class="cb-tagreel-item"><span>pH-Balanced •  </span></div>
+        <!-- Base items (one cycle) -->
         <div class="cb-tagreel-item"><span>Aloe &amp; Panthenol Hydration •  </span></div>
         <div class="cb-tagreel-item"><span>Light Foam Formula •  </span></div>
         <div class="cb-tagreel-item"><span>No Buildup •  </span></div>
@@ -64,5 +43,13 @@
       </div>
     </div>
   </section>
+<script>
+    // Duplicate items until row is wide enough for seamless loop
+    const row = document.querySelector('.cb-tagreel-row');
+    const baseItems = Array.from(row.children);
+    while (row.scrollWidth < window.innerWidth * 2) {
+      baseItems.forEach(item => row.appendChild(item.cloneNode(true)));
+    }
+  </script>
 </body>
 </html>
