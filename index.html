@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buff Curl Ticker</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow: hidden; }
+    .cb-tagreel { width: 100%; overflow: hidden; background: linear-gradient(90deg, #ff8a00, #e52e71); }
+    .cb-tagreel-content { overflow: hidden; }
+    .cb-tagreel-row {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 15s linear infinite;
+    }
+    .cb-tagreel-item {
+      flex: none;
+    }
+    .cb-tagreel-item span {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #ffffff;
+      white-space: nowrap;
+      /* your spacing comes from the “•  ” in the HTML */
+    }
+    @keyframes scroll-left {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+  <section class="cb-tagreel">
+    <div class="cb-tagreel-content">
+      <div class="cb-tagreel-row">
+        <!-- First loop -->
+        <div class="cb-tagreel-item"><span>Aloe &amp; Panthenol Hydration •  </span></div>
+        <div class="cb-tagreel-item"><span>Light Foam Formula •  </span></div>
+        <div class="cb-tagreel-item"><span>No Buildup •  </span></div>
+        <div class="cb-tagreel-item"><span>pH-Balanced •  </span></div>
+        <!-- Duplicate for seamless -->
+        <div class="cb-tagreel-item"><span>Aloe &amp; Panthenol Hydration •  </span></div>
+        <div class="cb-tagreel-item"><span>Light Foam Formula •  </span></div>
+        <div class="cb-tagreel-item"><span>No Buildup •  </span></div>
+        <div class="cb-tagreel-item"><span>pH-Balanced •  </span></div>
+      </div>
+      
+  </section>
+</body>
+</html>
